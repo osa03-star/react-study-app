@@ -11,8 +11,8 @@ type RegisterProps = {
 const Register = (props: RegisterProps): JSX.Element => {
   const weeks = ['月', '火', '水', '木', '金', '土', '日']
   const topics = ['プログラミング', '読書', '英語']
-  const [mode, setMode] = useState(null);
-  const [errorMessage, setErrorMessage] = useState([]);
+  const [mode, setMode] = useState<null | number>(null);
+  const [errorMessage, setErrorMessage] = useState<string[]>([]);
 
   const formRef = useRef<HTMLFormElement>(null);
 
