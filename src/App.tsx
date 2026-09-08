@@ -13,8 +13,8 @@ function App() {
   return (
     <div className='p-5'>
     <p className='text-xl'>Weekly Study Log</p>
-    <div className='flex gap-12 mt-10'>
-      <div className='w-3/4 h-full space-y-6'>
+    <div className='block md:flex md:gap-12 mt-10'>
+      <div className='md:w-3/4 h-full space-y-6'>
         <SumTime 
           data={data}
         />
@@ -26,7 +26,7 @@ function App() {
           setData={setData}
         />
       </div>
-      <div className='w-1/4 h-full'>
+      <div className='mt-8 md:w-1/4 h-full'>
         <Register 
           data={data}
           setData={setData}

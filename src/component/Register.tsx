@@ -56,7 +56,7 @@ const Register = (props: RegisterProps): JSX.Element => {
 
   return(
     <div className="bg-white shadow-sm rounded-lg p-6 mb-4">
-      <p>新規ログの追加</p>
+      <p className='pb-2'>新規ログの追加</p>
       <form className="space-y-3" onSubmit={handleSubmit} ref={formRef}>
         <select name="day" className="block text-sm text-gray-700 w-full rounded-md p-2 border shadow-sm ">
           <option>曜日</option>
@@ -70,15 +70,15 @@ const Register = (props: RegisterProps): JSX.Element => {
             <option key={index}>{topic}</option>
           ))}
         </select>
-        <p className="block text-sm font-medium text-gray-700 mb-1">作業時間</p>
+        <p className="block text-sm font-medium text-gray-700 pb-2">作業時間</p>
         <input name="time" type="number" min={0} className="block p-2 text-sm border w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"/>
-        <p className="block text-sm font-medium text-gray-700 mb-1">自己評価</p>
-        <div className="flex space-x-1">
-          <div className={`w-full rounded-xl border p-6 ${mode === 0 ? "bg-gray-100" : ""}`} onClick={() => setMode(0)}><CiFaceFrown /></div>
-          <div className={`w-full rounded-xl border p-6 ${mode === 1 ? "bg-gray-100" : ""}`} onClick={() => setMode(1)}><CiFaceMeh /></div>
-          <div className={`w-full rounded-xl border p-6 ${mode === 2 ? "bg-gray-100" : ""}`} onClick={() => setMode(2)}><CiFaceSmile /></div>
+        <p className="block text-sm font-medium text-gray-700 pb-2">自己評価</p>
+        <div className="flex flex-wrap gap-4 items-center justify-center">
+          <div className={`flex flex-1 aspect-square rounded-xl border items-center justify-center ${mode === 0 ? "bg-gray-100" : ""}`} onClick={() => setMode(0)}><CiFaceFrown size={24}/></div>
+          <div className={`flex flex-1 aspect-square rounded-xl border items-center justify-center ${mode === 1 ? "bg-gray-100" : ""}`} onClick={() => setMode(1)}><CiFaceMeh size={24}/></div>
+          <div className={`flex flex-1 aspect-square rounded-xl border items-center justify-center ${mode === 2 ? "bg-gray-100" : ""}`} onClick={() => setMode(2)}><CiFaceSmile size={24}/></div>
         </div>
-        <p className="block text-sm font-medium text-gray-700 mb-1">メモ：</p>
+        <p className="block text-sm font-medium text-gray-700 pb-2">メモ：</p>
         <textarea 
           name='comment'
           placeholder="（任意）" 
